@@ -17,7 +17,7 @@ const Home = () => {
             const responseC = await Api.post("/auth/cliente", {email, senha});
 
             if(responseC.status === 200){
-                console.log(responseC.data)
+                localStorage.setItem("token", responseC.data)
                 history.push("/cliente/pets");
             } else {
                 setError(true)
@@ -28,7 +28,7 @@ const Home = () => {
                 const responseF = await Api.post("/auth/funcionario", {email, senha});
 
                 if (responseF.status === 200) {
-                    console.log(responseF.data)
+                    localStorage.setItem("token", responseF.data)
                     history.push("/lista_funcionarios");
                 } else {
                     setError(true)
