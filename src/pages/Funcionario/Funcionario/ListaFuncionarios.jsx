@@ -161,7 +161,7 @@ const ListaFuncionarios = () => {
         try {
             const response = await Api.delete("/funcionario/" + id);
 
-            if(response.status == 200){
+            if(response.status === 200){
                 alert("Funcionário deletado com sucesso!");
                 window.location.reload();
             }
@@ -251,7 +251,7 @@ const ListaFuncionarios = () => {
                     />
 
                     <Button type="submit" sx={{mr: 5}} variant="outlined">Salvar</Button>
-                    <Button onClick={() => deleteFuncionario()} sx={{mr: 5}} variant="contained">Excluir</Button>
+                    <Button onClick={() => deleteFuncionario(id)} sx={{mr: 5}} variant="contained">Excluir</Button>
 
                   </Box>
                 </Modal>

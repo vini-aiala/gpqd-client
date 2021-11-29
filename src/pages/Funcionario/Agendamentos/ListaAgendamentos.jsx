@@ -191,7 +191,7 @@ const ListaAgendamentos = () => {
         try {
             const response = await Api.delete("/agendamento/" + id);
 
-            if(response.status == 200){
+            if(response.status === 200){
                 alert("Agendamento cancelado com sucesso!");
                 window.location.reload();
             }

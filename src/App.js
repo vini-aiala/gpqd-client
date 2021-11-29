@@ -15,6 +15,7 @@ import ListaPedidos from "./pages/Funcionario/Pedidos/ListaPedidos.jsx";
 import ListaAgendamentosCliente from "./pages/Cliente/Agendamentos/ListaAgendamentos.jsx";
 import ListaPetsCliente from "./pages/Cliente/Pets/ListaPets.jsx";
 import ListaPedidosCliente from "./pages/Cliente/Pedidos/ListaPedidos.jsx";
+import Cadastro from "./pages/Home/Cadastro";
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
           <Route path="/lista_agendamentos" component={ListaAgendamentos}/>
           <Route path="/lista_pets" component={ListaPets}/>
           <Route path="/lista_pedidos" component={ListaPedidos}/>
-
+          <Route path={"/cadastro"} component={Cadastro} />
         </Switch>
       </Router>
     </ThemeProvider>

@@ -8,6 +8,10 @@ const Home = () => {
     const history = useHistory();
     const [error, setError] = useState(false);
 
+    const handleRedirect = () => {
+        history.push("/cadastro");
+    }
+
     async function handleSubmit(e) {
         e.preventDefault()
         const email = e.target.elements.email.value
@@ -47,7 +51,7 @@ const Home = () => {
                     <Heading1
                         style={{
                             textAlign: "center",
-                            textDecoration: "underline",
+                            fontSize: "2.5rem",
                             marginBottom: "2rem",
                         }}
                         >
@@ -56,7 +60,10 @@ const Home = () => {
                     <form onSubmit={handleSubmit} style={{display: "flex", flexDirection:"column"}}>
                         <TextField id="outlined-basic1" label="E-mail" name={"email"} variant="outlined" type={"email"} error={error} style={{marginBottom: "2rem"}}/>
                         <TextField id="outlined-basic2" label="Senha" name={"senha"} variant="outlined" type={"password"} error={error} style={{marginBottom: "2rem"}}/>
-                        <Button variant="contained" type={"submit"} >Entrar</Button>
+                        <div style={{display:'flex'}}>
+                        <Button variant="contained" sx={{mr: 2}} type={"submit"} >Entrar</Button>
+                        <Button onClick={handleRedirect} variant="outlined">Cadastro</Button>
+                        </div>
                     </form>
                 </CardContent>
             </Card>

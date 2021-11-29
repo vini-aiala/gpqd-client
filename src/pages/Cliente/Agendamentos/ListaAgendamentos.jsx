@@ -111,7 +111,7 @@ const ListaAgendamentosCliente = () => {
                                 id: item.funcionario.id,
                                 cargo: item.funcionario.cargo
                             },
-                            horario: item.horario,
+                            horario: date.toLocaleString('pt-BR', { dateStyle:'short', timeStyle:'short'}),
                             id: item.id,
                             pet: {
                                 dono: {

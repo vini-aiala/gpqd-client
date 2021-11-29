@@ -225,7 +225,7 @@ const ListaClientes = () => {
                     />
 
                     <Button type="submit" sx={{mr: 5}} variant="outlined">Salvar</Button>
-                    <Button onClick={() => deleteCliente()} sx={{mr: 5}} variant="contained">Excluir</Button>
+                    <Button onClick={() => deleteCliente(id)} sx={{mr: 5}} variant="contained">Excluir</Button>
 
                   </Box>
                 </Modal>
